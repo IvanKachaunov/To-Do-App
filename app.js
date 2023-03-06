@@ -15,8 +15,8 @@ input.addEventListener("keypress", (event) => {
       if(input.value === ""){
       alert("Write text first")
     } else {
+      if(maxCreated <= 10){
     maxCreated++;
-    if(maxCreated <= 10){
     let liCreated = document.createElement("li");
     let span = document.createElement("span");
     let buttonContainer = document.createElement("div");
@@ -51,7 +51,7 @@ input.addEventListener("keypress", (event) => {
     }
      else{
       alert("Your reached the maximum of created li's!");
-       input.value = "";
+      input.value = "";
     }
   }
   }
@@ -61,8 +61,8 @@ function createLists(){
     if(input.value === ""){
       alert("Write text first")
     } else {
+      if(maxCreated <= 10){
     maxCreated++;
-    if(maxCreated <= 10){
     let liCreated = document.createElement("li");
     let span = document.createElement("span");
     let buttonContainer = document.createElement("div");
@@ -97,7 +97,8 @@ function createLists(){
     }
      else{
       alert("Your reached the maximum of created li's!");
-       input.value = "";
+      input.value = "";
+      console.log(maxCreated);
     }
   }
 }
@@ -118,6 +119,7 @@ function strikeText(){
 function deleteFunction(){
   let storeElement = this.closest('li');
   storeElement.remove();
+  maxCreated--;
 }
 
 function editFunction(){
