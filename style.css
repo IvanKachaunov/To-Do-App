@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@400&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, #432371 , #faae7b);
+  height: 100vh;
+}
+
+.titlepage-selector{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titlepage-selector h1{
+  padding-bottom: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.input-selector{
+  display: flex;
+}
+
+.input-selector input{
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-family: 'Labrada', serif;
+  font-size: 16px;
+}
+
+.input-selector button{
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: rgb(170, 0, 170);
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.input-selector button:hover{
+background-color: rgb(170, 0, 170);
+color: rgb(53, 53, 53);
+}
+
+.list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.list-container li{
+  list-style: none;
+  font-size: 17px;
+  background-color: #fff;
+  padding: 5px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  font-family: 'Labrada', serif;
+}
+
+.checkbox{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  height: 17px;
+  width: 17px;
+  margin-left: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 105px;
+  margin-left: 25px;
+}
+
+.delete {
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease all;
+}
+
+.edit {
+  background-color: #7f7fff;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease all;
+}
+
+.delete:hover{
+  background-color: #2b2b2b;
+}
+
+.edit:hover{
+  background-color: #5151ff;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.valueChange-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.valueChange-container label{
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+#changeValue{
+  outline: none;
+  padding: 3px;
+}
+
+#change{
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #7f7fff;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 769px){
+
+  .titlepage-selector h1{
+    font-size: 30px;
+  }
+
+  .input-selector input{
+    font-size: 15px;
+  }
+
+  .list-container li{
+    padding: 4px;
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (max-width: 426px){
+
+  .titlepage-selector h1{
+    font-size: 28px;
+  }
+
+  .input-selector input{
+    font-size: 14px;
+  }
+
+  .list-container li{
+    padding: 4px;
+    font-size: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 350px){
+
+  .titlepage-selector h1{
+    font-size: 26px;
+  }
+
+  .input-selector input{
+    font-size: 12px;
+  }
+
+  .list-container li{
+    padding: 3px;
+    font-size: 14px;
+  }
+
+}
